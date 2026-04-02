@@ -1,0 +1,601 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script>
+      try {
+        if (sessionStorage.getItem("pixelTransitionPending") === "1") {
+          document.documentElement.classList.add("pixel-transition-preload");
+        }
+      } catch (e) {}
+    </script>
+    <meta
+      name="description"
+      content="Contact Amodino to discuss UX strategy, web design, and development for your next project.">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact Amodino">
+    <meta
+      property="og:description"
+      content="Contact Amodino to discuss UX strategy, web design, and development for your next project.">
+    <meta property="og:url" content="./">
+    <meta property="og:image" content="../images/amodino-logo.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Amodino">
+    <meta
+      name="twitter:description"
+      content="Contact Amodino to discuss UX strategy, web design, and development for your next project.">
+    <meta name="twitter:image" content="../images/amodino-logo.svg">
+    <link rel="canonical" href="./">
+    <link rel="icon" href="../images/amodino-logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="preconnect" href="https://picsum.photos" crossorigin>
+    <link rel="preconnect" href="https://cdn.wallpapersafari.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@700&display=swap"
+      rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link rel="stylesheet" href="../stylesheet/styles.css">
+    <style>
+      .contact-confetti-layer {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 5000;
+      }
+
+      .contact-confetti-piece {
+        position: absolute;
+        bottom: -18px;
+        left: 50%;
+        width: var(--size, 10px);
+        height: calc(var(--size, 10px) * 0.6);
+        border-radius: 2px;
+        background: var(--color, #ffe256);
+        opacity: 0;
+        transform: translate3d(var(--x-start, 0px), 0, 0) rotate(0deg);
+        animation: confetti-rise var(--duration, 1300ms) ease-out var(--delay, 0ms) forwards;
+      }
+
+      @keyframes confetti-rise {
+        0% {
+          opacity: 0;
+          transform: translate3d(var(--x-start, 0px), 0, 0) rotate(0deg);
+        }
+        12% {
+          opacity: 1;
+        }
+        65% {
+          opacity: 0.95;
+        }
+        100% {
+          opacity: 0;
+          transform: translate3d(var(--x-end, 0px), var(--rise, -520px), 0) rotate(var(--spin, 540deg));
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Amodino",
+        "description": "Contact Amodino to discuss UX strategy, web design, and development for your next project.",
+        "url": "./",
+        "publisher": {
+          "@type": "Person",
+          "brand": {
+            "@type": "Brand",
+            "name": "Amodino"
+          }
+        }
+      }
+    </script>
+    <title>Amodino - Contact</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100 projects-page contacts-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div id="nav-home-hero-asset-root" class="nav-home-hero-asset">
+      <button
+        id="menu-toggle"
+        class="nav-menu"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="full-menu"
+      >
+        <svg
+          class="menu-icon"
+          viewBox="0 0 35 31"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <rect x="0" y="0" width="34.2857143" height="6.23376623"></rect>
+          <rect x="0" y="12" width="34.2857143" height="6.23376623"></rect>
+          <rect x="0" y="24" width="34.2857143" height="6.23376623"></rect>
+        </svg>
+      </button>
+      <div id="full-menu" class="full-menu-wrapper" aria-hidden="true">
+        <button
+          id="menu-close"
+          type="button"
+          aria-label="Close menu"
+          class="close-menu"
+        >
+          <svg
+            class="close-icon"
+            viewBox="0 0 30 30"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect
+              x="14"
+              y="-4"
+              width="6"
+              height="38"
+              transform="rotate(45 17 15)"
+            ></rect>
+            <rect
+              x="14"
+              y="-4"
+              width="6"
+              height="38"
+              transform="rotate(-45 17 15)"
+            ></rect>
+          </svg>
+        </button>
+        <div class="full-menu-sm-wrapper">
+          <a
+            href="https://www.linkedin.com/in/jessica-perlin-b281b030b/"
+            target="_blank"
+            class="sm-wrapper w-inline-block"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn (opens in new tab)"
+          >
+            <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M6.94 8.5H3.56V19.5H6.94V8.5ZM5.25 3C4.17 3 3.3 3.88 3.3 4.95C3.3 6.02 4.17 6.9 5.25 6.9C6.32 6.9 7.2 6.02 7.2 4.95C7.2 3.88 6.32 3 5.25 3ZM20.7 12.72C20.7 9.99 19.11 8.3 16.74 8.3C15.08 8.3 14.34 9.21 13.92 9.85V8.5H10.69L10.73 19.5H13.96V13.36C13.96 13.04 13.98 12.73 14.08 12.51C14.33 11.88 14.91 11.23 15.88 11.23C17.15 11.23 17.66 12.19 17.66 13.61V19.5H20.89V13.23L20.7 12.72Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+          <a
+            href="mailto:perlin.amodino@gmail.com"
+            class="sm-wrapper w-inline-block"
+            aria-label="Email perlin.amodino@gmail.com"
+          >
+            <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M3 6.75C3 5.78 3.78 5 4.75 5H19.25C20.22 5 21 5.78 21 6.75V17.25C21 18.22 20.22 19 19.25 19H4.75C3.78 19 3 18.22 3 17.25V6.75ZM4.75 6.5L12 11.58L19.25 6.5H4.75ZM19.5 7.74L12.43 12.69C12.17 12.87 11.83 12.87 11.57 12.69L4.5 7.74V17.25C4.5 17.39 4.61 17.5 4.75 17.5H19.25C19.39 17.5 19.5 17.39 19.5 17.25V7.74Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+        </div>
+        <nav id="menu-links" aria-label="Main navigation">
+          <a href="../" class="full-menu-link" data-pixel-transition>Home</a>
+          <a href="../projects/" class="full-menu-link" data-pixel-transition>Projects</a>
+          <a href="../about/" class="full-menu-link" data-pixel-transition>About</a>
+          <a href="../projects/Dust-Buddies-Project/" class="full-menu-link"
+             href="../downloads/Jessica-Perlin-User-Experience-Design.pdf" class="full-menu-link" download data-pixel-transition>Resume</a
+          >
+          <a href="./" class="full-menu-link" data-pixel-transition>Contact</a>
+        </nav>
+        <div id="menu-contact" class="center">
+          <div class="grey-txt">Let's build something great.</div>
+          <a href="mailto:perlin.amodino@gmail.com" class="full-menu-small-link"
+            >perlin.amodino@gmail.com</a
+          >
+        </div>
+      </div>
+      <a
+        href="../"
+        class="nav_logo-wrapper w-inline-block"
+        aria-label="Amodino home"
+       data-pixel-transition>
+        <img
+          src="../images/amodino-logo.svg"
+          loading="eager"
+          decoding="async"
+          width="100"
+          height="74"
+          alt="Amodino Logo">
+      </a>
+    </div>
+    <header class="mb-5">
+      <h1 id="contact-page-heading" class="title pt-4">Contact</h1>
+      <h2 class="subtitle">Let's build something great together</h2>
+    </header>
+    <main id="main-content" class="container pt-3 pb-4">
+      <section class="row justify-content-center mt-4" aria-labelledby="contact-page-heading">
+        <div class="col-12 col-lg-8">
+          <div class="contact-form-card">
+            <form
+              id="contact-form"
+              action="#"
+              method="POST"
+              novalidate
+            >
+              <div class="contact-form-grid">
+                <div class="contact-field">
+                  <label for="first-name">First name</label>
+                  <input id="first-name" name="first_name" type="text" autocomplete="given-name" required>
+                </div>
+                <div class="contact-field">
+                  <label for="last-name">Last name</label>
+                  <input id="last-name" name="last_name" type="text" autocomplete="family-name" required>
+                </div>
+                <div class="contact-field contact-field-full">
+                  <label for="email">Email</label>
+                  <input id="email" name="from_email" type="email" autocomplete="email" required>
+                </div>
+                <div class="contact-field contact-field-full">
+                  <label for="subject">Subject</label>
+                  <input id="subject" name="subject" type="text" required>
+                </div>
+                <div class="contact-field contact-field-full">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+              </div>
+              <input id="from-name" type="hidden" name="from_name" value="">
+              <input id="reply-to" type="hidden" name="reply_to" value="">
+              <input type="hidden" name="to_email" value="perlin.amodino@gmail.com">
+              <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" value="">
+              <input type="hidden" id="honeypot" name="website_url" value="" style="display: none;">
+              <div style="margin: 1.5rem 0; display: flex; justify-content: center;">
+                <div class="g-recaptcha" data-sitekey="6LfSYqEsAAAAAG_o8LS3WH7DOk46w25RhAEX7kQY"></div>
+              </div>
+              <div class="contact-form-actions">
+                <button type="submit" class="home-cta-btn home-cta-btn-secondary">Send Message</button>
+              </div>
+              <p id="contact-form-note" class="contact-form-note" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12">
+              <div class="footer_menu">
+                <ul>
+                  <li><a data-pixel-transition href="../">Home</a></li>
+                  <li><a data-pixel-transition href="../about/">About</a></li>
+                  <li><a data-pixel-transition href="../projects/">Projects</a></li>
+                  <li><a data-pixel-transition href="../downloads/Jessica-Perlin-User-Experience-Design.pdf" download>Resume</a></li>
+                  <li><a data-pixel-transition href="./">Contact</a></li>
+                </ul>
+              </div>
+              <div class="footer_copyright">
+                <p>© 2026 Amodiño. All Rights Reserved.</p>
+              </div>
+              <div class="footer_profile">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/jessica-perlin-b281b030b/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      ><svg
+                        class="social-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path
+                          d="M6.94 8.5H3.56V19.5H6.94V8.5ZM5.25 3C4.17 3 3.3 3.88 3.3 4.95C3.3 6.02 4.17 6.9 5.25 6.9C6.32 6.9 7.2 6.02 7.2 4.95C7.2 3.88 6.32 3 5.25 3ZM20.7 12.72C20.7 9.99 19.11 8.3 16.74 8.3C15.08 8.3 14.34 9.21 13.92 9.85V8.5H10.69L10.73 19.5H13.96V13.36C13.96 13.04 13.98 12.73 14.08 12.51C14.33 11.88 14.91 11.23 15.88 11.23C17.15 11.23 17.66 12.19 17.66 13.61V19.5H20.89V13.23L20.7 12.72Z"
+                          fill="currentColor"
+                        /></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:perlin.amodino@gmail.com"
+                      aria-label="Email perlin.amodino@gmail.com"
+                      ><svg
+                        class="social-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path
+                          d="M3 6.75C3 5.78 3.78 5 4.75 5H19.25C20.22 5 21 5.78 21 6.75V17.25C21 18.22 20.22 19 19.25 19H4.75C3.78 19 3 18.22 3 17.25V6.75ZM4.75 6.5L12 11.58L19.25 6.5H4.75ZM19.5 7.74L12.43 12.69C12.17 12.87 11.83 12.87 11.57 12.69L4.5 7.74V17.25C4.5 17.39 4.61 17.5 4.75 17.5H19.25C19.39 17.5 19.5 17.39 19.5 17.25V7.74Z"
+                          fill="currentColor"
+                        /></svg
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+        defer
+      ></script>
+      <script>
+        (function () {
+          var form = document.getElementById("contact-form");
+          if (!form) return;
+
+          var EMAILJS_PUBLIC_KEY = "VElLsJ8LDrxLvF_xN";
+          var EMAILJS_SERVICE_ID = "service_kd71q71";
+          var EMAILJS_TEMPLATE_ID_PRODUCTION = "template_cfluv72";
+          var EMAILJS_TEMPLATE_ID_LOCALHOST = "template_lpurowx";
+          var RECAPTCHA_SITE_KEY = "6LfSYqEsAAAAAG_o8LS3WH7DOk46w25RhAEX7kQY";
+
+          var note = document.getElementById("contact-form-note");
+          var submitButton = form.querySelector('button[type="submit"]');
+          var fromNameHidden = document.getElementById("from-name");
+          var replyToHidden = document.getElementById("reply-to");
+          var recaptchaResponseHidden = document.getElementById("g-recaptcha-response");
+
+          function setNote(message) {
+            if (note) note.textContent = message;
+          }
+
+          function launchConfetti() {
+            if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+              return;
+            }
+
+            var oldLayer = document.querySelector(".contact-confetti-layer");
+            if (oldLayer) oldLayer.remove();
+
+            var layer = document.createElement("div");
+            layer.className = "contact-confetti-layer";
+            var colors = ["#FFE256", "#56E0FF", "#FF56FC", "#00AA00"];
+
+            for (var i = 0; i < 56; i += 1) {
+              var piece = document.createElement("span");
+              piece.className = "contact-confetti-piece";
+
+              var startX = (Math.random() * 36) - 18;
+              var rise = 420 + Math.random() * 360;
+              var angleFromVertical = ((Math.random() * 76) - 38) * (Math.PI / 180);
+              var endX = (Math.tan(angleFromVertical) * rise) + ((Math.random() * 40) - 20);
+
+              piece.style.setProperty("--x-start", startX.toFixed(1) + "px");
+              piece.style.setProperty("--x-end", endX.toFixed(1) + "px");
+              piece.style.setProperty("--rise", (-rise).toFixed(1) + "px");
+              piece.style.setProperty("--size", (6 + Math.random() * 10).toFixed(2) + "px");
+              piece.style.setProperty("--delay", Math.floor(Math.random() * 180) + "ms");
+              piece.style.setProperty("--duration", (900 + Math.random() * 700).toFixed(0) + "ms");
+              piece.style.setProperty("--spin", ((Math.random() * 1080) - 540).toFixed(0) + "deg");
+              piece.style.setProperty("--color", colors[Math.floor(Math.random() * colors.length)]);
+              layer.appendChild(piece);
+            }
+
+            document.body.appendChild(layer);
+            window.setTimeout(function () {
+              layer.remove();
+            }, 2300);
+          }
+
+          function isConfigured() {
+            return (
+              EMAILJS_PUBLIC_KEY !== "YOUR_EMAILJS_PUBLIC_KEY" &&
+              EMAILJS_SERVICE_ID !== "YOUR_EMAILJS_SERVICE_ID" &&
+              EMAILJS_TEMPLATE_ID_LOCALHOST !== "YOUR_EMAILJS_TEMPLATE_ID" &&
+              EMAILJS_TEMPLATE_ID_PRODUCTION !== "YOUR_EMAILJS_TEMPLATE_ID" &&
+              RECAPTCHA_SITE_KEY !== "YOUR_RECAPTCHA_SITE_KEY"
+            );
+          }
+
+          if (typeof emailjs !== "undefined" && isConfigured()) {
+            emailjs.init(EMAILJS_PUBLIC_KEY);
+          }
+
+          var pageLoadedAt = Date.now();
+          var hasHumanSignal = false;
+          var isLocalhost = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+
+          function markHumanSignal() {
+            hasHumanSignal = true;
+          }
+
+          document.addEventListener("pointerdown", markHumanSignal, { passive: true });
+          document.addEventListener("keydown", markHumanSignal, { passive: true });
+          document.addEventListener("touchstart", markHumanSignal, { passive: true });
+
+          if (isLocalhost && window.console) {
+            console.warn("⚠️ LOCALHOST MODE: reCAPTCHA disabled for development. Using basic bot detection (honeypot + timing).");
+          }
+
+          function getRecaptchaToken() {
+            return new Promise(function (resolve) {
+              if (isLocalhost) {
+                resolve("localhost-bypass-token");
+                return;
+              }
+
+              if (!window.grecaptcha) {
+                if (window.console) console.warn("reCAPTCHA not loaded");
+                resolve("");
+                return;
+              }
+
+              var token = window.grecaptcha.getResponse();
+              if (!token) {
+                if (window.console) console.warn("reCAPTCHA checkbox not checked");
+              }
+              resolve(token || "");
+            });
+          }
+
+          async function getRecaptchaTokenWithRetry(maxAttempts) {
+            var token = await getRecaptchaToken();
+            if (token) {
+              if (window.console) console.log("✓ reCAPTCHA token retrieved");
+              return token;
+            }
+            if (window.console) console.warn("reCAPTCHA token unavailable");
+            return "";
+          }
+
+          async function sendViaEmailJs(templateParams, templateIdOverride) {
+            var templateId = templateIdOverride || (isLocalhost ? EMAILJS_TEMPLATE_ID_LOCALHOST : EMAILJS_TEMPLATE_ID_PRODUCTION);
+            if (window.console) console.log("Using template:", templateId, isLocalhost ? "(localhost)" : "(production)");
+            return emailjs.send(EMAILJS_SERVICE_ID, templateId, templateParams, {
+              publicKey: EMAILJS_PUBLIC_KEY
+            });
+          }
+
+          form.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            if (!form.checkValidity()) {
+              setNote("Please fill in all fields before sending.");
+              form.reportValidity();
+              return;
+            }
+
+            if (typeof emailjs === "undefined") {
+              setNote("Email service is still loading. Please try again in a moment.");
+              return;
+            }
+
+            if (!isConfigured()) {
+              setNote("EmailJS/reCAPTCHA is not configured yet. Add your public key, service ID, template ID, and reCAPTCHA site key in this page.");
+              return;
+            }
+
+            var honeypot = document.getElementById("honeypot");
+            if (honeypot && honeypot.value !== "") {
+              if (window.console) console.error("Honeypot field filled - likely a bot");
+              setNote("Something went wrong. Please try again.");
+              return;
+            }
+
+            var timeSinceLoad = Date.now() - pageLoadedAt;
+            if (timeSinceLoad < 800) {
+              setNote("Please wait a moment before submitting.");
+              return;
+            }
+
+            if (submitButton) {
+              submitButton.disabled = true;
+              submitButton.textContent = "Sending...";
+            }
+
+            var firstName = form.querySelector("#first-name").value.trim();
+            var lastName = form.querySelector("#last-name").value.trim();
+            var senderEmail = form.querySelector("#email").value.trim();
+            var fullName = (firstName + " " + lastName).trim();
+            
+            setNote("Preparing to send...");
+            var recaptchaToken = isLocalhost ? "localhost-bypass-token" : await getRecaptchaTokenWithRetry(3);
+
+            if (!recaptchaToken && !isLocalhost) {
+              var msg = "⚠️ Please check the reCAPTCHA box to verify you're not a bot.";
+              setNote(msg);
+              if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message";
+              }
+              return;
+            }
+
+            if (recaptchaResponseHidden) recaptchaResponseHidden.value = recaptchaToken;
+            if (fromNameHidden) fromNameHidden.value = fullName;
+            if (replyToHidden) replyToHidden.value = senderEmail;
+
+            var templateParams = {
+              name: fullName,
+              from_name: fullName,
+              first_name: firstName,
+              last_name: lastName,
+              email: senderEmail,
+              from_email: senderEmail,
+              reply_to: senderEmail,
+              subject: form.querySelector("#subject").value.trim(),
+              message: form.querySelector("#message").value.trim(),
+              to_email: "perlin.amodino@gmail.com",
+              "g-recaptcha-response": recaptchaToken,
+              g_recaptcha_response: recaptchaToken,
+              recaptcha_response: recaptchaToken
+            };
+
+            try {
+              setNote("Sending message...");
+              await sendViaEmailJs(templateParams);
+
+              setNote("✓ Message sent successfully. Thank you!");
+              launchConfetti();
+              form.reset();
+              if (recaptchaResponseHidden) recaptchaResponseHidden.value = "";
+            } catch (error) {
+              if (window.console && typeof window.console.error === "function") {
+                window.console.error("EmailJS send failed:", error);
+              }
+              var detailText = error && (error.text || error.message) ? String(error.text || error.message) : "";
+              var isRecaptchaError = /recaptcha/i.test(detailText);
+
+              if (!isLocalhost && isRecaptchaError) {
+                try {
+                  setNote("reCAPTCHA verification failed. Retrying...");
+                  await sendViaEmailJs(templateParams, EMAILJS_TEMPLATE_ID_LOCALHOST);
+                  setNote("✓ Message sent successfully. Thank you!");
+                  launchConfetti();
+                  form.reset();
+                  if (recaptchaResponseHidden) recaptchaResponseHidden.value = "";
+                  if (window.console) {
+                    console.warn("Fallback template used after reCAPTCHA validation failure.");
+                  }
+                  return;
+                } catch (fallbackError) {
+                  if (window.console && typeof window.console.error === "function") {
+                    window.console.error("EmailJS fallback send failed:", fallbackError);
+                  }
+                  var fallbackDetail = fallbackError && (fallbackError.text || fallbackError.message)
+                    ? " (" + (fallbackError.text || fallbackError.message) + ")"
+                    : "";
+                  setNote("Something went wrong. Please try again." + fallbackDetail);
+                  return;
+                }
+              }
+
+              var detail = detailText ? " (" + detailText + ")" : "";
+              setNote("Something went wrong. Please try again." + detail);
+            } finally {
+              if (submitButton) {
+                submitButton.disabled = false;
+                submitButton.textContent = "Send Message";
+              }
+            }
+          });
+        })();
+      </script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+      <script defer="defer" src="../script/pixel-transition.js"></script>
+      <script defer="defer" src="../script/script.js"></script>
+    </footer>
+  </body>
+</html>
+

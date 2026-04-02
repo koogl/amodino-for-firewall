@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script>
+      try {
+        if (sessionStorage.getItem("pixelTransitionPending") === "1") {
+          document.documentElement.classList.add("pixel-transition-preload");
+        }
+      } catch (e) {}
+    </script>
+    <meta
+      name="description"
+      content="Visit Amodiño: My Web UX design portfolio featuring accessible, interactive web experiences and project case studies based in Raleigh, NC. Together, let's make the web fun!">
+    <link rel="icon" href="../images/amodino-logo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preconnect"
+      href="https://cdn.prod.website-files.com"
+      crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@700&display=swap"
+      rel="stylesheet">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" as="style" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" media="print" onload="this.media='all'" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" as="style">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../stylesheet/styles.css">
+    <title>Amodiño - Website UX Design Portfolio</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100 home-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <aside class="home-news-ticker" aria-label="Amodiño studio bulletin">
+      <p class="visually-hidden">
+        Amodiño studio bulletin: Breaking news, local designer discovers that fun design and accessibility can coexist. Traffic update, more playful websites are moving into the fast lane. Market watch, bold UX decisions are up while boring interfaces are down. Weather alert, scattered bursts of delight expected across all digital experiences.
+      </p>
+      <div class="home-news-ticker-track" aria-hidden="true">
+        <span>BREAKING: Local design studio confirms that the curly 'ñ' isn't actually that hard to pronounce.</span>
+        <span>TRAFFIC: Strong user flow reported, minor delays only for boring websites.</span>
+        <span>INTERVIEW: Local Amodiño designer shares insights: "I'm actually just one guy and need a job like, really badly."</span>
+        <span>WEATHER: Scattered bursts of silly lil creatures expected across this digital experience through late evening.</span>
+        <span>BREAKING: Local design studio confirms that the curly 'ñ' isn't actually that hard to pronounce.</span>
+      </div>
+    </aside>
+    <div class="home-bg-bubbles" aria-hidden="true" role="presentation">
+      <span class="bubble-lane"><span class="bubble"></span></span>
+      <span class="bubble-lane"><span class="bubble"></span></span>
+      <span class="bubble-lane"><span class="bubble"></span></span>
+      <span class="bubble-lane"><span class="bubble"></span></span>
+      <span class="bubble-lane"><span class="bubble"></span></span>
+      <span class="bubble-lane"><span class="bubble"></span></span>
+      <span class="bubble-lane"><span class="bubble"></span></span>
+      <span class="bubble-lane"><span class="bubble"></span></span>
+      <span class="bubble-lane"><span class="bubble"></span></span>
+      <span class="bubble-lane"><span class="bubble"></span></span>
+    </div>
+    <div id="nav-home-hero-asset-root" class="nav-home-hero-asset">
+      <button
+        id="menu-toggle"
+        class="nav-menu"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="full-menu"
+      >
+        <svg
+          class="menu-icon"
+          viewBox="0 0 35 31"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <rect x="0" y="0" width="34.2857143" height="6.23376623"></rect>
+          <rect x="0" y="12" width="34.2857143" height="6.23376623"></rect>
+          <rect x="0" y="24" width="34.2857143" height="6.23376623"></rect>
+        </svg>
+      </button>
+      <div id="full-menu" class="full-menu-wrapper" aria-hidden="true">
+        <button
+          id="menu-close"
+          type="button"
+          aria-label="Close menu"
+          class="close-menu"
+        >
+          <svg
+            class="close-icon"
+            viewBox="0 0 30 30"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <rect
+              x="14"
+              y="-4"
+              width="6"
+              height="38"
+              transform="rotate(45 17 15)"
+            ></rect>
+            <rect
+              x="14"
+              y="-4"
+              width="6"
+              height="38"
+              transform="rotate(-45 17 15)"
+            ></rect>
+          </svg>
+        </button>
+        <div class="full-menu-sm-wrapper">
+          <a
+            href="https://www.linkedin.com/in/jessica-perlin-b281b030b/"
+            target="_blank"
+            class="sm-wrapper w-inline-block"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn (opens in new tab)"
+          >
+            <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M6.94 8.5H3.56V19.5H6.94V8.5ZM5.25 3C4.17 3 3.3 3.88 3.3 4.95C3.3 6.02 4.17 6.9 5.25 6.9C6.32 6.9 7.2 6.02 7.2 4.95C7.2 3.88 6.32 3 5.25 3ZM20.7 12.72C20.7 9.99 19.11 8.3 16.74 8.3C15.08 8.3 14.34 9.21 13.92 9.85V8.5H10.69L10.73 19.5H13.96V13.36C13.96 13.04 13.98 12.73 14.08 12.51C14.33 11.88 14.91 11.23 15.88 11.23C17.15 11.23 17.66 12.19 17.66 13.61V19.5H20.89V13.23L20.7 12.72Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+          <a
+            href="mailto:perlin.amodino@gmail.com"
+            class="sm-wrapper w-inline-block"
+            aria-label="Email perlin.amodino@gmail.com"
+          >
+            <svg
+              class="social-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M3 6.75C3 5.78 3.78 5 4.75 5H19.25C20.22 5 21 5.78 21 6.75V17.25C21 18.22 20.22 19 19.25 19H4.75C3.78 19 3 18.22 3 17.25V6.75ZM4.75 6.5L12 11.58L19.25 6.5H4.75ZM19.5 7.74L12.43 12.69C12.17 12.87 11.83 12.87 11.57 12.69L4.5 7.74V17.25C4.5 17.39 4.61 17.5 4.75 17.5H19.25C19.39 17.5 19.5 17.39 19.5 17.25V7.74Z"
+                fill="currentColor"
+              />
+            </svg>
+          </a>
+        </div>
+        <nav id="menu-links" aria-label="Main navigation">
+          <a href="./" class="full-menu-link" data-pixel-transition>Home</a>
+          <a href="../projects/" class="full-menu-link" data-pixel-transition>Projects</a>
+          <a href="../about/" class="full-menu-link" data-pixel-transition>About</a>
+          <a href="../downloads/Jessica-Perlin-User-Experience-Design.pdf" class="full-menu-link" data-pixel-transition download>Resume</a>
+          <a href="../contacts/" class="full-menu-link" data-pixel-transition>Contact</a>
+        </nav>
+        <div id="menu-contact" class="center">
+          <div class="grey-txt">Enjoy the little things in life.</div>
+          <a href="mailto:perlin.amodino@gmail.com" class="full-menu-small-link"
+            >perlin.amodino@gmail.com</a
+          >
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="container">
+        <video
+          loop
+          muted
+          playsinline
+          preload="none"
+          class="px-5 pb-5 hero-logo"
+          aria-hidden="true"
+          data-autoplay-on-visible
+        >
+          <source src="../images/animated-amodino-logo.mp4" type="video/mp4">
+        </video>
+        <img
+          class="lrg-img-pointer"
+          src="../images/Large-Arrow-curved.svg"
+          alt=""
+          loading="lazy"
+          decoding="async"
+          width="264"
+          height="372">
+        <h1 class="hero-txt subtitle text-end">enjoying the little things.</h1>
+      </div>
+    </header>
+    <main id="main-content">
+      <div class="bg-none py-5 about-section">
+        <section
+          class="testimonials-section el-section-temoignages"
+          aria-labelledby="testimonials-heading"
+        >
+          <div class="testimonials-text-wrapper el-temoignage-txt-wrapper">
+            <h2 id="testimonials-heading">
+              Want to bring fun back into your site?
+            </h2>
+            <p id="testimonials-subtext">
+              Creating designs that are both engaging & W3C accessible. Stuck
+              between form or function? Amodiño can help!
+            </p>
+          </div>
+          <div
+            class="swiper testimonials-slider-wrapper swiper-slider-wrapper w-dyn-list swiper-cards swiper-3d"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Client testimonials"
+            aria-describedby="testimonials-subtext testimonials-keyboard-help"
+            tabindex="0"
+          >
+            <p id="testimonials-keyboard-help" class="visually-hidden">
+              Use left and right arrow keys to navigate through testimonials.
+            </p>
+            <div
+              role="list"
+              class="swiper-wrapper testimonials-slider-list swiper-slider-list w-dyn-items"
+              id="swiper-wrapper-f3fbcbe7e663d6f1"
+              aria-live="polite"
+            >
+              <div
+                role="group"
+                class="swiper-slide w-dyn-item"
+                aria-label="1 / 4"
+              >
+                <div class="testimonial-card el-temoignages-item">
+                  <div class="testimonial-photo el-temoignage-photo">
+                    <img
+                      alt="Photo of Dust Buddies Figma File"
+                      loading="lazy"
+                      decoding="async"
+                      src="../images/Dust-Buddies.png"
+                      sizes="(max-width: 767px) 90vw, 389px"
+                      class="testimonial-image abs-temoignage-img">
+                  </div>
+                  <div class="testimonial-caption el-temoignages-caption">
+                
+                    <div class="testimonial-copy el-temoignage-rte w-richtext">
+                      <h3 class="testimonial-card-title">UX Strategy</h3>
+                      <p>
+                        When a site is easy to navigate, people stay longer, and search engines notice. Help search engines, and your users, find what they need quickly.
+                      </p>
+                    </div>
+                  </div>
+                  <a href="../projects/" class="testimonial-cta" data-pixel-transition>Learn more &rarr;</a>
+                </div>
+              </div>
+              <div
+                role="group"
+                class="swiper-slide w-dyn-item"
+                aria-label="2 / 4"
+              >
+                <div class="testimonial-card el-temoignages-item">
+                  <div class="testimonial-photo el-temoignage-photo">
+                    <img
+                      alt="Photo of Macon County Website Code"
+                      loading="lazy"
+                      decoding="async"
+                      src="../images/macon-cover-card.jpg"
+                      sizes="(max-width: 767px) 90vw, 389px"
+                      
+                      class="testimonial-image abs-temoignage-img">
+                  </div>
+                  <div class="testimonial-caption el-temoignages-caption">
+                    <div class="testimonial-copy el-temoignage-rte w-richtext">
+                      <h3 class="testimonial-card-title">Web Development</h3>
+                      <p>
+Sites built to work on any device, with clean code and accessible structure. A well-built site works on any screen, loads cleanly, and is easy for everyone to use!
+                      </p>
+                    </div>
+                  </div>
+                  <a href="../projects/" class="testimonial-cta" data-pixel-transition>Learn more &rarr;</a>
+                </div>
+              </div>
+              <div
+                role="group"
+                class="swiper-slide w-dyn-item"
+                aria-label="3 / 4"
+              >
+                <div class="testimonial-card el-temoignages-item">
+                  <div class="testimonial-photo el-temoignage-photo">
+                    <img
+                      alt="Photo of SEO CODE"
+                      loading="lazy"
+                      decoding="async"
+                      src="../images/seo-code-card.png"
+                      sizes="(max-width: 767px) 90vw, 389px"
+
+                      class="testimonial-image abs-temoignage-img">
+                  </div>
+                  <div class="testimonial-caption el-temoignages-caption">
+                    <div class="testimonial-copy el-temoignage-rte w-richtext">
+                      <h3 class="testimonial-card-title">Technical SEO</h3>
+                      <p>
+            We're always online, so why not enjoy it? Thoughtful design and clear structure help people move through a site naturally, and keep them there longer!
+                      </p>
+                    </div>
+                  </div>
+                  <a href="../projects/" class="testimonial-cta" data-pixel-transition>Learn more &rarr;</a>
+                </div>
+              </div>
+              <div
+                role="group"
+                class="swiper-slide w-dyn-item"
+                aria-label="4 / 4"
+              >
+                <div class="testimonial-card el-temoignages-item">
+                  <div class="testimonial-photo el-temoignage-photo">
+                    <img
+                      alt="Photo of Social Media Marketing"
+                      loading="lazy"
+                      decoding="async"
+                      src="../images/socialmedia.png"
+                      sizes="(max-width: 767px) 90vw, 389px"
+                      class="testimonial-image abs-temoignage-img">
+                  </div>
+                  <div class="testimonial-caption el-temoignages-caption">
+                   
+                    <div class="testimonial-copy el-temoignage-rte w-richtext">
+                      <h3 class="testimonial-card-title">Social Media Marketing</h3>
+                      <p>
+Designing for real people (not just clicks!) means the experience feels good to use and still drives results.
+                      </p>
+                    </div>
+                  </div>
+                  <a href="../projects/" class="testimonial-cta" data-pixel-transition>Learn more &rarr;</a>
+                </div>
+              </div>
+            </div>
+            <button
+              class="testimonials-prev swiper-prev"
+              type="button"
+              aria-label="Previous slide"
+              aria-controls="swiper-wrapper-f3fbcbe7e663d6f1"
+            ></button>
+            <button
+              class="testimonials-next swiper-next"
+              type="button"
+              aria-label="Next slide"
+              aria-controls="swiper-wrapper-f3fbcbe7e663d6f1"
+            ></button>
+            <div
+              class="testimonials-pagination swiper-pagination"
+            ></div>
+          </div>
+        </section>
+      </div>
+      <div class="home-wave-section" aria-hidden="true">
+        <svg
+          class="home-wave-svg"
+          viewBox="0 0 1440 520"
+          preserveAspectRatio="xMidYMid slice"
+          role="presentation"
+          focusable="false"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g class="home-wave-track">
+            <g transform="translate(0,260)">
+              <path
+                d="M-720,-70 C-540,-70 -540,70 -360,70 C-180,70 -180,-70 0,-70 C180,-70 180,70 360,70 C540,70 540,-70 720,-70"
+              />
+            </g>
+            <g transform="translate(1440,260)">
+              <path
+                d="M-720,-70 C-540,-70 -540,70 -360,70 C-180,70 -180,-70 0,-70 C180,-70 180,70 360,70 C540,70 540,-70 720,-70"
+              />
+            </g>
+            <g transform="translate(2880,260)">
+              <path
+                d="M-720,-70 C-540,-70 -540,70 -360,70 C-180,70 -180,-70 0,-70 C180,-70 180,70 360,70 C540,70 540,-70 720,-70"
+              />
+            </g>
+          </g>
+        </svg>
+      </div>
+      <section class="home-cta-section" aria-labelledby="home-cta-heading">
+        <div class="home-cta-card">
+          <p class="home-cta-kicker">Based in Raleigh, NC</p>
+          <h2 id="home-cta-heading">Let's Work Together!</h2>
+          <p class="home-cta-copy">
+            Let's talk owning your business your way. Need that extra design boost?<br> Reach out to
+            me below to get started!
+          </p>
+          <div class="home-cta-actions">
+            <a
+              href="../contacts/"
+              data-pixel-transition
+              class="home-cta-btn home-cta-btn-secondary"
+              >Let's chat!</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-5">
+      <video
+        loop
+        muted
+        playsinline
+        preload="none"
+        class="px-5 pb-5 hero-logo blinker"
+        aria-hidden="true"
+        data-autoplay-on-visible
+      >
+        <source src="../images/animated-blinker-mascot.mp4" type="video/mp4">
+      </video>
+      <div class="footer">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col-12">
+              <div class="footer_menu">
+                <ul>
+                  <li><a data-pixel-transition href="./">Home</a></li>
+                  <li><a data-pixel-transition href="../about/">About</a></li>
+                  <li><a data-pixel-transition href="../projects/">Projects</a></li>
+                  <li><a data-pixel-transition href="../downloads/Jessica-Perlin-User-Experience-Design.pdf" download>Resume</a></li>
+                  <li><a data-pixel-transition href="../contacts/">Contact</a></li>
+                </ul>
+              </div>
+              <div class="footer_copyright">
+                <p>© 2026 Amodiño. All Rights Reserved.</p>
+              </div>
+              <div class="footer_profile">
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/jessica-perlin-b281b030b/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      ><svg
+                        class="social-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path
+                          d="M6.94 8.5H3.56V19.5H6.94V8.5ZM5.25 3C4.17 3 3.3 3.88 3.3 4.95C3.3 6.02 4.17 6.9 5.25 6.9C6.32 6.9 7.2 6.02 7.2 4.95C7.2 3.88 6.32 3 5.25 3ZM20.7 12.72C20.7 9.99 19.11 8.3 16.74 8.3C15.08 8.3 14.34 9.21 13.92 9.85V8.5H10.69L10.73 19.5H13.96V13.36C13.96 13.04 13.98 12.73 14.08 12.51C14.33 11.88 14.91 11.23 15.88 11.23C17.15 11.23 17.66 12.19 17.66 13.61V19.5H20.89V13.23L20.7 12.72Z"
+                          fill="currentColor"
+                        /></svg
+                    ></a>
+                  </li>
+                  <li>
+                    <a
+                      href="mailto:perlin.amodino@gmail.com"
+                      aria-label="Email perlin.amodino@gmail.com"
+                      ><svg
+                        class="social-icon"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        focusable="false"
+                      >
+                        <path
+                          d="M3 6.75C3 5.78 3.78 5 4.75 5H19.25C20.22 5 21 5.78 21 6.75V17.25C21 18.22 20.22 19 19.25 19H4.75C3.78 19 3 18.22 3 17.25V6.75ZM4.75 6.5L12 11.58L19.25 6.5H4.75ZM19.5 7.74L12.43 12.69C12.17 12.87 11.83 12.87 11.57 12.69L4.5 7.74V17.25C4.5 17.39 4.61 17.5 4.75 17.5H19.25C19.39 17.5 19.5 17.39 19.5 17.25V7.74Z"
+                          fill="currentColor"
+                        /></svg></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      defer="defer"
+      src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"
+    ></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+    <script defer="defer" src="../script/pixel-transition.js"></script>
+    <script defer="defer" src="../script/script.js"></script>
+  </body>
+</html>
+
+

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 760" role="img" aria-labelledby="title desc">
+  <title id="title">Profile placeholder</title>
+  <desc id="desc">Gray placeholder image for a future profile photo.</desc>
+  <rect width="640" height="760" fill="#d3d8de"/>
+  <circle cx="320" cy="275" r="110" fill="#b8bfc8"/>
+  <rect x="150" y="430" width="340" height="180" rx="90" fill="#b8bfc8"/>
+  <rect x="170" y="650" width="300" height="24" rx="12" fill="#9ea8b5"/>
+</svg>
