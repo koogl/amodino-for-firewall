@@ -801,6 +801,7 @@ html.pixel-transition-preload body {
 .card-info p {
   opacity: 0;
   text-shadow: rgba(0, 0, 0, 1) 0 2px 3px;
+  max-width: 75ch;
   transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -939,6 +940,43 @@ html.pixel-transition-preload body {
   object-fit: contain;
 }
 
+.slide__image-wrap--side-by-side {
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.slide__image-wrap--side-by-side .slide__image {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Stack images vertically on tablets and phones */
+@media screen and (max-width: 991px) {
+  .slide__image-wrap--side-by-side {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .slide__image-wrap--side-by-side .slide__image {
+    width: 100%;
+    max-height: 50vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slide__image-wrap--side-by-side {
+    padding: 1rem;
+  }
+
+  .slide__image-wrap--side-by-side .slide__image {
+    max-height: 40vh;
+  }
+}
+
 .slide__image {
   width: 100%;
   height: 100%;
@@ -978,6 +1016,7 @@ html.pixel-transition-preload body {
   color: #333;
   word-break: break-word;
   overflow-wrap: break-word;
+  max-width: 75ch;
 }
 
 .slide__body a {
@@ -1264,6 +1303,7 @@ display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #fff;
+    text-align: center;
 }
 
 /* Rendering optimization for below-the-fold content. */
@@ -1682,6 +1722,7 @@ footer {
   margin-bottom: 0;
   font-size: 18px;
   line-height: 24px;
+  max-width: 75ch;
 }
 
 .testimonials-section .testimonial-card-title {
@@ -1763,6 +1804,7 @@ footer {
   font-size: 1.65rem;  /* ~26px — scaled ×1.5 to match */
   line-height: 1.5;
   margin: 0;
+  max-width: 75ch;
 }
 .testimonials-section .el-temoignage-rte,
 .testimonials-section .el-temoignage-rte p,
@@ -2331,12 +2373,14 @@ footer {
 
 .about-page .about-faq-content > p {
   overflow: hidden;
+  max-width: 75ch;
 }
 
 .about-page .about-faq-item p {
   margin: 0;
   padding: 18px 16px 16px;
   font-family: "Roboto", sans-serif;
+  max-width: 75ch;
 }
 
 @media (prefers-reduced-motion: reduce) {
